@@ -1,0 +1,27 @@
+{
+    "name": "node-csvreader",
+    "version": "0.0.1",
+    "description": "CSV file reader",
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ysden123/node-csvreader.git"
+    },
+    "keywords": [
+        "csv",
+        "file",
+        "reader"
+    ],
+    "author": "Yuriy Stul",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ysden123/node-csvreader/issues"
+    },
+    "homepage": "https://github.com/ysden123/node-csvreader#readme",
+    "dependencies": {
+        "csv": ""
+    }
+}
