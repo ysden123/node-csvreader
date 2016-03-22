@@ -3,6 +3,6 @@
 
 var csvReader = require('..');
 
-var fileReader = csvReader.fileReader('test1.csv', (line) => {
-    console.log(line);
+var fileReader = csvReader.reader('test1.csv', (record) => {
+    console.log(record);
 });
