@@ -7,24 +7,6 @@ var path = require('path');
 var util = require('util');
 var fs = require('fs');
 var os = require('os');
-// var expect = require('chai').expect;
-
-// var fileReader = csvReader.reader('./data/test1.csv', (record) => {
-//     console.log(record);
-// });
-
-// console.log();
-
-// var fileReaderWithSkip = csvReader.reader('test1.csv', (record) => {
-//     console.log(record);
-// }, {skip: 5});
-
-// describe('reader', function() {
-//     it('should be string', function(){
-//        var s  ='123';
-//        expect(s).to.be.string;
-//     });
-// });
 
 describe('reader', function() {
     let csvFileName;
@@ -60,16 +42,39 @@ describe('reader', function() {
         }
     });
 
-    describe('read', function() {
-        it('Should read and parse file', function() {
+    describe('csvReader', function() {
+        it('Should read and parse file', function(done) {
             let rowCount = 0;
-            csvReader.read(csvFileName, (record) => {
-                record.should.have.length(columnAmount);
-                ++rowCount;
-                console.log('==> rowCount = %d, rowAmount = %d', rowCount, rowAmount);
-            });
-            // rowCount.should.equal(rowAmount);
-            console.log('==> rowCount = %d, rowAmount = %d', rowCount, rowAmount);
+
+            csvReader
+                .read(csvFileName, (record) => {
+                    record.should.have.length(columnAmount);
+                    ++rowCount;
+                })
+                .then(() => {
+                    rowCount.should.equal(rowAmount);
+                    done();
+                })
+                .catch(err => {
+                    done(err);
+                });
+        });
+
+        it('Should skip 5 rows', function(done) {
+            let rowCount = 0;
+
+            csvReader
+                .read(csvFileName, (record) => {
+                    record.should.have.length(columnAmount);
+                    ++rowCount;
+                }, { skip: 5 })
+                .then(() => {
+                    rowCount.should.equal(rowAmount - 5);
+                    done();
+                })
+                .catch(err => {
+                    done(err);
+                });
         });
     });
 });
