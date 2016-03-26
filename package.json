@@ -1,6 +1,6 @@
 {
-  "name": "node-csvreader",
-  "version": "0.0.1",
+  "name": "csvreader",
+  "version": "0.0.2",
   "description": "CSV file reader",
   "main": "./lib",
   "scripts": {
