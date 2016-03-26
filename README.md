@@ -1,6 +1,24 @@
 # node-csvreader
 CSV file reader for NodeJS
 
+## Installation
+
+### From command line
+
+Specific version:
+> npm install https://github.com/ysden123/node-csvreader.git#v0.0.1  --save
+
+Last version:
+> npm install https://github.com/ysden123/node-csvreader.git  --save
+
+### Dependencies in the package.json file
+
+Specific version:
+> "csvreader": "git+https://github.com/ysden123/node-csvreader.git#v0.0.1"
+
+Last version:
+> "csvreader": "git+https://github.com/ysden123/node-csvreader.git"
+
 ## Usage
 
 Function `read` has arguments:
@@ -16,7 +34,7 @@ Object `options` has attributes (all attributes are optional):
 ### Read all lines, no headers
 
 ```javascript
-var csvReader = require('csv-reader');
+var csvReader = require('csvreader');
 
 function recordHandler(data){
   console.log(data[0],data[1]);
@@ -35,7 +53,7 @@ csvReader
 ### Skip 5 lines, no headers
 
 ```javascript
-var csvReader = require('csv-reader');
+var csvReader = require('csvreader');
 
 function recordHandler(data){
   console.log(data[0],data[1]);
@@ -58,7 +76,7 @@ csvReader
 ### Read all lines, 1st line is headers, handle headers
 
 ```javascript
-var csvReader = require('csv-reader');
+var csvReader = require('csvreader');
 
 function recordHandler(data){
   console.log(data[0],data[1]);
