@@ -76,5 +76,56 @@ describe('reader', function() {
                     done(err);
                 });
         });
+
+        it('Should process header line', function(done) {
+            let rowCount = 0;
+            let headerColCount = 0;
+            let options = {
+                hasHeaders: true,
+                headerRecordHandler: (data) => {
+                    headerColCount = data.length;
+                }
+            };
+
+            csvReader
+                .read(csvFileName, (record) => {
+                    record.should.have.length(columnAmount);
+                    ++rowCount;
+                }, options)
+                .then(() => {
+                    rowCount.should.equal(rowAmount - 1);
+                    headerColCount.should.equal(columnAmount);
+                    done();
+                })
+                .catch(err => {
+                    done(err);
+                });
+        });
+
+        it('Should process header line and skip', function(done) {
+            let rowCount = 0;
+            let headerColCount = 0;
+            let options = {
+                skip: 5,
+                hasHeaders: true,
+                headerRecordHandler: (data) => {
+                    headerColCount = data.length;
+                }
+            };
+
+            csvReader
+                .read(csvFileName, (record) => {
+                    record.should.have.length(columnAmount);
+                    ++rowCount;
+                }, options)
+                .then(() => {
+                    rowCount.should.equal(rowAmount - 5 - 1);
+                    headerColCount.should.equal(columnAmount);
+                    done();
+                })
+                .catch(err => {
+                    done(err);
+                });
+        });
     });
 });
