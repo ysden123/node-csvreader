@@ -3,8 +3,11 @@ CSV file reader for NodeJS
 
 ## Installation
 
-### From command line
+### From command line, npm
 
+> npm install csvreader
+
+### From command line, GitHub
 Specific version:
 > npm install https://github.com/ysden123/node-csvreader.git#v0.0.1  --save
 
