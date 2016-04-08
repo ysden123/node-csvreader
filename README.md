@@ -135,5 +135,8 @@ csvReader
 ### V1.0.0
 Parse options were added.
 
+### V1.0.1
+Fixed version number in package.json file..
+
 ## Dependencies
 CSVReader uses package csv (https://github.com/wdavidw/node-csv)
