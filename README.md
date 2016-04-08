@@ -29,10 +29,11 @@ Function `read` has arguments:
 - recordHandler - function with 1 argument - array of record items
 - options - optional, specifies addition requirements.
 
-Object `options` has attributes (all attributes are optional):
+Object `options` has properties (all properties are optional):
 - skip - specifies number of lines to skip
 - hasHeaders - true, if CSV file has headers; false, if CSV file has not headers. If true, then line with headers will be ignored
 - headerRecordHandler - function with 1 argument - array of header items
+- parseOptions - object, specifies options for parser, see (http://csv.adaltas.com/parse/)
 
 ### Read all lines, no headers
 
@@ -104,5 +105,35 @@ csvReader
     console.error(err);
   });
 ```
+
+### Read all lines, no headers, delimiter is tabulator
+
+```javascript
+var csvReader = require('csvreader');
+
+function recordHandler(data){
+  console.log(data[0],data[1]);
+}
+
+var options = {
+    parseOptions: {
+        delimiter: '\t'
+    }
+}
+
+csvReader
+  .read(csvFileName, recordHandler)
+  .then(() => {
+    console.log('Done!');
+  }, options)
+  .catch(err => {
+    console.error(err);
+  });
+```
+
+## Change log
+### V1.0.0
+Parse options were added.
+
 ## Dependencies
 CSVReader uses package csv (https://github.com/wdavidw/node-csv)
