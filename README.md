@@ -16,6 +16,10 @@ Last version:
 
 ### Dependencies in the package.json file
 
+#### From npm
+> "csvreader": ""
+
+#### From git
 Specific version:
 > "csvreader": "git+https://github.com/ysden123/node-csvreader.git#v0.0.1"
 
@@ -132,11 +136,14 @@ csvReader
 ```
 
 ## Change log
-### V1.0.0
-Parse options were added.
+### V1.0.2
+README was corrected.
 
 ### V1.0.1
 Fixed version number in package.json file..
+
+### V1.0.0
+Parse options were added.
 
 ## Dependencies
 CSVReader uses package csv (https://github.com/wdavidw/node-csv)
