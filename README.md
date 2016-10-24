@@ -1,6 +1,8 @@
 # node-csvreader
 CSV file reader for NodeJS
 
+![Travis status](https://secure.travis-ci.org/ysden123/node-csvreader.png)
+
 ## Installation
 
 ### From command line, npm
