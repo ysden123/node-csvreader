@@ -2,7 +2,6 @@
 CSV file reader for NodeJS
 
 ![Travis status](https://secure.travis-ci.org/ysden123/node-csvreader.png)
-![Travis status](https://travis-ci.org/ysden123/node-csvreader.svg?branch=feature%2Fci)
 
 ## Installation
 
