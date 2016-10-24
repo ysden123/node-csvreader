@@ -4,7 +4,7 @@
   "description": "CSV file reader",
   "main": "./lib",
   "scripts": {
-    "test": "mocha test"
+    "test": "./node_modules/.bin/mocha test"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "csv": ""
   },
   "devDependencies": {
-    "chai": ""
+    "chai": "",
+    "mocha": "^3.1.2"
   }
 }
