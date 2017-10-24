@@ -138,6 +138,9 @@ csvReader
 ```
 
 ## Change log
+### V1.0.3
+Fixed version of the csv dependency: 1.1.1
+
 ### V1.0.2
 README was corrected.
 
