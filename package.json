@@ -1,6 +1,6 @@
 {
   "name": "csvreader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CSV file reader",
   "main": "./lib",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ysden123/node-csvreader#readme",
   "dependencies": {
-    "csv": ""
+    "csv": "1.1.1"
   },
   "devDependencies": {
     "chai": "",
