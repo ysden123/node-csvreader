@@ -3,7 +3,7 @@ node_js:
   - "4"
 
 before_script:
-  - "npm install"
+  - "yarn"
 
 script:
-  - "npm test"
+  - "yarn test"
