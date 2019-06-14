@@ -145,7 +145,7 @@ Fixed version of the csv dependency: 1.1.1
 README was corrected.
 
 ### V1.0.1
-Fixed version number in package.json file..
+Fixed version number in package.json file.
 
 ### V1.0.0
 Parse options were added.
